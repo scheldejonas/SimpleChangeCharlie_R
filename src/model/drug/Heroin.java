@@ -14,12 +14,24 @@ import model.BaseDrug;
 public class Heroin extends BaseDrug {
 
     public Heroin(int price, int amount) {
-        super(price, amount);
+        super(180,40);
     }
     
     @Override
     public String getName() {
         return "Heroin";
+    }
+    
+    @Override
+    public void rollPrice() {
+        int newPrice = (int) Math.round(super.getPrice() * 1.1);
+        setPrice(newPrice);
+    }
+    
+    @Override
+    public void rollStock() {
+        int newStock = (int) Math.round(super.getAmount() * 1.1);
+        setAmount(newStock);
     }
     
 }
