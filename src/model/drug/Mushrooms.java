@@ -13,7 +13,7 @@ import model.BaseDrug;
  *
  * @author CHRIS
  */
-public class Mushrooms extends BaseDrug {
+public class Mushrooms extends BaseDrug implements DrugPriceModelInterface {
 
     public Mushrooms(int price, int amount) {
         super(price, amount);

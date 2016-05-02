@@ -23,7 +23,8 @@ import model.drug.Weed;
  */
 public class BaseDrug {
     
-    int price, amount;
+    int price;
+    int amount;
     Random r;
 
     public BaseDrug(int price, int amount) {

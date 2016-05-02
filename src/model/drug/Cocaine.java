@@ -12,9 +12,10 @@ import model.BaseDrug;
  *
  * @author CHRIS
  */
-public class Cocaine extends BaseDrug {
+public class Cocaine extends BaseDrug implements DrugPriceModelInterface {
 
-    int priceChanges, stockChanges;
+    int priceChanges;
+    int stockChanges;
     
     public Cocaine(int price, int amount) {
         super(price, amount);
