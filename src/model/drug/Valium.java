@@ -6,6 +6,7 @@
 package model.drug;
 
 import model.BaseDrug;
+import model.drug.pricestrategy.BasePrice;
 
 /**
  *
@@ -15,6 +16,7 @@ public class Valium extends BaseDrug {
 
     public Valium(int price, int amount) {
         super(price, amount);
+        super.setPriceStrategy(new BasePrice());
     }
     
     @Override

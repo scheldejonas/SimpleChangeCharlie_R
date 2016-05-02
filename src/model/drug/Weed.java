@@ -5,38 +5,23 @@
  */
 package model.drug;
 
-import java.util.Calendar;
-import java.util.TimeZone;
 import model.BaseDrug;
+import model.drug.pricestrategy.PickOneOfTen;
 
 /**
  *
  * @author CHRIS
  */
-public class Weed extends BaseDrug implements DrugPriceModelInterface {
+public class Weed extends BaseDrug {
 
     public Weed(int price, int amount) {
         super(price, amount);
+        super.setPriceStrategy(new PickOneOfTen());
     }
     
     @Override
     public String getName() {
         return "Weed";
-    }
-    
-    private int getSeconds() {
-        Calendar cal = Calendar.getInstance(TimeZone.getDefault()); 
-        return cal.get(Calendar.SECOND);
-    }
-    
-    @Override
-    public void rollPrice() {
-        setPrice(getSeconds() * 2);
-    }
-
-    @Override
-    public void rollStock() {
-        setAmount(getSeconds());
     }
     
 }

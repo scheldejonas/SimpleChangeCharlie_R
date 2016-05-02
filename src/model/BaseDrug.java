@@ -16,6 +16,8 @@ import model.drug.Heroin;
 import model.drug.Mushrooms;
 import model.drug.Valium;
 import model.drug.Weed;
+import model.drug.pricestrategy.BasePrice;
+import model.drug.pricestrategy.DrugPriceModelInterface;
 
 /**
  *
@@ -26,11 +28,13 @@ public class BaseDrug {
     int price;
     int amount;
     Random r;
+    private DrugPriceModelInterface priceStrategy;
 
     public BaseDrug(int price, int amount) {
         r = new Random();
         this.price = price;
         this.amount = amount;
+        priceStrategy = new BasePrice();
     }
     
     public BaseDrug getNewBaseDrug(String drugName) {
@@ -88,31 +92,20 @@ public class BaseDrug {
         return "null";
     }
     
+    public DrugPriceModelInterface getPriceStrategy() {
+        return priceStrategy;
+    }
+
+    public void setPriceStrategy(DrugPriceModelInterface priceStrategy) {
+        this.priceStrategy = priceStrategy;
+    }
+    
     public void rollPrice() {
-        int randomNumber = r.nextInt(100);
-        if (randomNumber <= 65) { //There is a 65% chance to change price for this drug
-            boolean increasePrice = r.nextBoolean(); //Random if it should increase or decrease price
-            int priceChange = r.nextInt(85) + 1;     //Amount (percentage) to increase/decrease price
-            int currentPrice = getPrice();         //Get current price
-            int priceDifference = (currentPrice * priceChange) / 100;   //Find price difference
-            int newPrice = currentPrice + (increasePrice ? priceDifference : -priceDifference);
-            setPrice(newPrice);
-            /*
-            System.out.println((increasePrice ? "Increasing " : "Decreasing ") + d.getName() + " with " 
-                             + priceChange + "%, currentPrice: " + currentPrice + ", Price difference: " + 
-                               priceDifference + ", totaling: " + newPrice);
-            */
-        }
+        setPrice( priceStrategy.rollPrice(price));
     }
     
     public void rollStock() {
-        if (r.nextInt(100) <= 65) { //There is a 65% chance to change stock for this drug
-            boolean increaseStock = r.nextBoolean(); //Random if it should increase or decrease stock
-            int stockChange = r.nextInt(41) + 15;     //Amount (percentage) to increase/decrease stock
-            int currentStock = getAmount();         //Get current stock
-            int stockDifference = (currentStock * stockChange) / 100;   //Find price difference
-            setAmount(currentStock + (increaseStock ? stockDifference : -stockDifference));
-        }
+        setAmount( priceStrategy.rollStock(amount));
     }
-    
+
 }

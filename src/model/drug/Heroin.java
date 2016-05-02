@@ -5,33 +5,24 @@
  */
 package model.drug;
 
+
 import model.BaseDrug;
+import model.drug.pricestrategy.TenProcent;
 
 /**
  *
  * @author CHRIS
  */
-public class Heroin extends BaseDrug implements DrugPriceModelInterface {
+public class Heroin extends BaseDrug {
 
     public Heroin(int price, int amount) {
-        super(180,40);
+        super(price, amount);
+        super.setPriceStrategy(new TenProcent());
     }
     
     @Override
     public String getName() {
         return "Heroin";
-    }
-    
-    @Override
-    public void rollPrice() {
-        int newPrice = (int) (super.getPrice() * 1.1);
-        setPrice(newPrice);
-    }
-    
-    @Override
-    public void rollStock() {
-        int newStock = (int) (super.getAmount() * 1.1);
-        setAmount(newStock);
     }
     
 }

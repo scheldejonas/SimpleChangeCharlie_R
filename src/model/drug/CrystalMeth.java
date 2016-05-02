@@ -6,15 +6,17 @@
 package model.drug;
 
 import model.BaseDrug;
+import model.drug.pricestrategy.BasePrice;
 
 /**
  *
  * @author CHRIS
  */
 public class CrystalMeth extends BaseDrug {
-
+    
     public CrystalMeth(int price, int amount) {
         super(price, amount);
+        super.setPriceStrategy(new BasePrice());
     }
     
     @Override

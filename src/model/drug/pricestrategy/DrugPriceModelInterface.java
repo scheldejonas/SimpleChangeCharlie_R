@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model.drug;
+package model.drug.pricestrategy;
 
 /**
  *
@@ -15,12 +15,12 @@ public interface DrugPriceModelInterface {
      * Use this on the specific drug, to change the price model to the drug.
      * @see BaseDrug
      */
-    public void rollPrice();
+    public int rollPrice(int superPrice);
     
     /**
      * Use this on the specific drug, to change the amount model to the drug.
      * @see BaseDrug
      */
-    public void rollStock();
+    public int rollStock(int superAmount);
     
 }

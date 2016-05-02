@@ -29,7 +29,7 @@ public abstract class BaseCountry {
             Amphetamine amphetamine = new Amphetamine(200, 50);
             Acid acid = new Acid(550, 33);
             AngelDust angelDust = new AngelDust(400, 60);
-            CrystalMeth crystalMeth = new CrystalMeth(800, 38);
+            CrystalMeth crystalMeth = new CrystalMeth(800,38);
             Hash hash = new Hash(180, 100);
             Weed weed = new Weed(150, 115);
             Mushrooms mushrooms = new Mushrooms(120, 95);

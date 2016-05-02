@@ -5,18 +5,18 @@
  */
 package model.drug;
 
-import java.util.Calendar;
-import java.util.TimeZone;
 import model.BaseDrug;
+import model.drug.pricestrategy.SecondsOfTheClock;
 
 /**
  *
  * @author CHRIS
  */
-public class Mushrooms extends BaseDrug implements DrugPriceModelInterface {
+public class Mushrooms extends BaseDrug {
 
     public Mushrooms(int price, int amount) {
         super(price, amount);
+        super.setPriceStrategy(new SecondsOfTheClock());
     }
     
     @Override
@@ -24,19 +24,4 @@ public class Mushrooms extends BaseDrug implements DrugPriceModelInterface {
         return "Mushrooms";
     }
 
-    private int getSeconds() {
-        Calendar cal = Calendar.getInstance(TimeZone.getDefault()); 
-        return cal.get(Calendar.SECOND);
-    }
-    
-    @Override
-    public void rollPrice() {
-        setPrice(getSeconds() * 2);
-    }
-
-    @Override
-    public void rollStock() {
-        setAmount(getSeconds());
-    }
-    
 }

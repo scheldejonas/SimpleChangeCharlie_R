@@ -6,15 +6,17 @@
 package model.drug;
 
 import model.BaseDrug;
+import model.drug.pricestrategy.PickOneOfTen;
 
 /**
  *
  * @author CHRIS
  */
 public class AngelDust extends BaseDrug {
-
+    
     public AngelDust(int price, int amount) {
         super(price, amount);
+        super.setPriceStrategy( new PickOneOfTen() );
     }
     
     @Override
@@ -23,3 +25,4 @@ public class AngelDust extends BaseDrug {
     }
 
 }
+
