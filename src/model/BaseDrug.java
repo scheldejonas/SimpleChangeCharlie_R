@@ -102,10 +102,23 @@ public class BaseDrug {
     
     public void rollPrice() {
         setPrice( priceStrategy.rollPrice(price));
+        setPrice( goldeNumber(price) );
     }
     
     public void rollStock() {
         setAmount( priceStrategy.rollStock(amount));
+    }
+    
+    public int goldeNumber(int finalPrice) {
+        if (r.nextInt(100) < 12) { //Use Golden Number if there is 12% chaance
+            if (r.nextInt(2) < 1) { // Determine if the price goes up or down by 50%
+                return (int) (finalPrice * 0.1); //Goes down by 10 times.
+            }
+            else { //Or goes up by 50%
+                return finalPrice * 10; //Goes up by 10 times
+            }
+        }
+        return finalPrice; //Golden Number chance was not inside 12% chance.
     }
 
 }
