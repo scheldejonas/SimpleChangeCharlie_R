@@ -22,9 +22,10 @@ import jxl.read.biff.BiffException;
 public class ExcelReader {
 
     ArrayList<String> shortNameList;
-    private String excelPathName = "NASDAQ companylist.xlsx";
+    private String excelPathName = "NASDAQ companylist.xls";
     
     public ExcelReader() {
+        System.out.println("Running Excel Reader");
         shortNameList = new ArrayList<>();
         File f = new File(excelPathName);
         try {
