@@ -28,7 +28,7 @@ public class BaseDrug {
     int price;
     int amount;
     Random r;
-    private DrugPriceModelInterface priceStrategy;
+    private DrugPriceModelInterface priceStrategy; 
 
     public BaseDrug(int price, int amount) {
         r = new Random();

@@ -29,7 +29,7 @@ public final class MafiaGame {
     private Player player;
     private int currentTurn = 0;
     private BaseCountry currentCountry;
-    private ArrayList<String> excelShortNames;
+    public static ArrayList<String> excelShortNames;
     private ArrayList<BaseCountry> countries;
     private ArrayList<BaseEvent> events;
     private ArrayList<Highscore> highscore;
@@ -241,5 +241,5 @@ public final class MafiaGame {
         }
         return false;
     }
-    
+
 }
