@@ -57,8 +57,7 @@ public class StockFinder {
         }
         allStocks = allStocks.substring(0, allStocks.length() - 1); //Cutting of the last, extra '+'-sign
         try {
-            //Creating a connection and support object and getting the stock prices from yahoo finance:
-            // URL yahoofinance = new URL("http://finance.yahoo.com/d/quotes.csv?s=" + allStocks + "&f=" + infoToGet);
+            //Creating a connection and support object and getting the stock prices from yahoo finance: URL yahoofinance = new URL("http://finance.yahoo.com/d/quotes.csv?s=" + allStocks + "&f=" + infoToGet);
             URL yahoofinance = new URL("http://finance.yahoo.com/d/quotes.csv?s=" + allStocks + "&f=" + infoToGet);
             URLConnection yc = yahoofinance.openConnection(); //Opening a connection 
             BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream())); //Creating a bufferedreader to hold stuff and loading it up instead 
