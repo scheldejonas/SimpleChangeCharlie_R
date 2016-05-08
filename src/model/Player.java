@@ -32,6 +32,10 @@ public class Player {
         return money;
     }
     
+    public void addMoney(int amount) {
+        money += amount;
+    }
+    
     public String getName() {
         return name;
     }

@@ -55,6 +55,7 @@ public class StockFinder {
         for (String stock : stockShortNames) {
             allStocks += stock + "+";
         }
+        System.out.println("" + allStocks);
         allStocks = allStocks.substring(0, allStocks.length() - 1); //Cutting of the last, extra '+'-sign
         try {
             //Creating a connection and support object and getting the stock prices from yahoo finance:
