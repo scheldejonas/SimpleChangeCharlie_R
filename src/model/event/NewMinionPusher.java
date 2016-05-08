@@ -26,9 +26,10 @@ public class NewMinionPusher extends BaseEvent {
 
     @Override
     public boolean shouldFire(Player player) {
-        int change = (player.hasHighFriends() ? 1 : 0);
-        change += (player.hasGun() ? 2 : 0);
-        int firePercentage = getFirePercentage() - change;
+        int change = (player.hasHighFriends() ? 4 : 0);
+        change += (player.isGenerous() ? 2 : 0);
+        change += (player.hasNiceClothes() ? 2 : 0);
+        int firePercentage = getFirePercentage() + change;
         Random r = new Random();
         int random = r.nextInt(100);
         System.out.println("[AngryPusher.shouldFire] random: " + random + ", firePercentage: " + firePercentage);
