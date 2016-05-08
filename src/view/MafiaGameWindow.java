@@ -264,12 +264,13 @@ public class MafiaGameWindow extends javax.swing.JFrame {
         jLabelYakuzaTerms3 = new javax.swing.JLabel();
         jLabelGunTerms1 = new javax.swing.JLabel();
         jButtonBuyGenerous = new javax.swing.JButton();
-        jLabelGenerousTerms1 = new javax.swing.JLabel();
+        jLabelGenerousTerms2 = new javax.swing.JLabel();
         jLabelTravelFirstClassTerms2 = new javax.swing.JLabel();
         jButtonBuyNiceClothes = new javax.swing.JButton();
         jLabelYakuzaTerms1 = new javax.swing.JLabel();
         jLabelTravelFirstClassTerms1 = new javax.swing.JLabel();
         jLabelYakuzaTerms5 = new javax.swing.JLabel();
+        jLabelGenerousTerms1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jButtonPrintAllDrugPrices = new javax.swing.JButton();
         jButtonTestHighScore = new javax.swing.JButton();
@@ -436,13 +437,13 @@ public class MafiaGameWindow extends javax.swing.JFrame {
                 jButtonHighFriendYakuzaActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonHighFriendYakuza, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 250, -1));
+        jPanel2.add(jButtonHighFriendYakuza, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 250, -1));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Tools for traveling better");
         jLabel5.setToolTipText("");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 580, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 36, 580, -1));
 
         jLabelNiceClothesTerms2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelNiceClothesTerms2.setText("3% improved chance of getting new helping girlfriend");
@@ -463,12 +464,12 @@ public class MafiaGameWindow extends javax.swing.JFrame {
                 jButtonBuyGunActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonBuyGun, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 155, 250, -1));
+        jPanel2.add(jButtonBuyGun, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 250, -1));
 
         jLabelGunTerms2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelGunTerms2.setText("1% less chance of get caught trespassing mafia territory");
         jLabelGunTerms2.setToolTipText("");
-        jPanel2.add(jLabelGunTerms2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 176, 330, 20));
+        jPanel2.add(jLabelGunTerms2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 330, 20));
 
         jLabelNiceClothesTerms1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelNiceClothesTerms1.setText("1% less chance of getting caught by custom");
@@ -478,22 +479,22 @@ public class MafiaGameWindow extends javax.swing.JFrame {
 
         jLabelYakuzaTerms4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelYakuzaTerms4.setText("4% improved chance of getting new minion pusher ");
-        jPanel2.add(jLabelYakuzaTerms4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 121, 330, 20));
+        jPanel2.add(jLabelYakuzaTerms4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 114, 330, 20));
 
         jLabelYakuzaTerms2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelYakuzaTerms2.setText("1% less chance of attacked by angry pusher");
         jLabelYakuzaTerms2.setToolTipText("");
-        jPanel2.add(jLabelYakuzaTerms2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 87, 330, 20));
+        jPanel2.add(jLabelYakuzaTerms2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 330, 20));
 
         jLabelYakuzaTerms3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelYakuzaTerms3.setText("2% less chance of get caught trespassing mafia territory");
         jLabelYakuzaTerms3.setToolTipText("");
-        jPanel2.add(jLabelYakuzaTerms3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 104, 330, 20));
+        jPanel2.add(jLabelYakuzaTerms3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 98, 330, 20));
 
         jLabelGunTerms1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelGunTerms1.setText("2% less chance of attacked by angry pusher");
         jLabelGunTerms1.setToolTipText("");
-        jPanel2.add(jLabelGunTerms1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 158, 330, 20));
+        jPanel2.add(jLabelGunTerms1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 330, 20));
 
         jButtonBuyGenerous.setText("Buy Generous ($40.000)");
         jButtonBuyGenerous.addActionListener(new java.awt.event.ActionListener() {
@@ -501,12 +502,14 @@ public class MafiaGameWindow extends javax.swing.JFrame {
                 jButtonBuyGenerousActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonBuyGenerous, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 196, 250, -1));
+        jPanel2.add(jButtonBuyGenerous, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 250, -1));
 
-        jLabelGenerousTerms1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabelGenerousTerms1.setText("1% less chance of attacked by angry pusher");
-        jLabelGenerousTerms1.setToolTipText("");
-        jPanel2.add(jLabelGenerousTerms1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 330, 20));
+        jLabelGenerousTerms2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelGenerousTerms2.setText("4% improved chance of getting new helping girlfriend");
+        jLabelGenerousTerms2.setToolTipText("");
+        jLabelGenerousTerms2.setFocusTraversalKeysEnabled(false);
+        jLabelGenerousTerms2.setIgnoreRepaint(true);
+        jPanel2.add(jLabelGenerousTerms2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 206, 330, 20));
 
         jLabelTravelFirstClassTerms2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelTravelFirstClassTerms2.setText("2% improved chance of getting new helping girlfriend");
@@ -524,7 +527,7 @@ public class MafiaGameWindow extends javax.swing.JFrame {
         jLabelYakuzaTerms1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelYakuzaTerms1.setText("2% less chance of getting caught by custom");
         jLabelYakuzaTerms1.setToolTipText("");
-        jPanel2.add(jLabelYakuzaTerms1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 330, 20));
+        jPanel2.add(jLabelYakuzaTerms1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 330, 20));
 
         jLabelTravelFirstClassTerms1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelTravelFirstClassTerms1.setText("1% less chance of getting caught by custom");
@@ -533,7 +536,12 @@ public class MafiaGameWindow extends javax.swing.JFrame {
 
         jLabelYakuzaTerms5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelYakuzaTerms5.setText("3% improved chance of getting new helping girlfriend");
-        jPanel2.add(jLabelYakuzaTerms5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 138, 330, 20));
+        jPanel2.add(jLabelYakuzaTerms5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 330, 20));
+
+        jLabelGenerousTerms1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelGenerousTerms1.setText("1% less chance of attacked by angry pusher");
+        jLabelGenerousTerms1.setToolTipText("");
+        jPanel2.add(jLabelGenerousTerms1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 330, 20));
 
         jTabbedPane1.addTab("Travel", jPanel2);
 
@@ -770,6 +778,7 @@ public class MafiaGameWindow extends javax.swing.JFrame {
             jButtonBuyGenerous.setEnabled(false);
             jButtonBuyGenerous.setText("You are a generous person");
             jLabelGenerousTerms1.setForeground(java.awt.Color.red);
+            jLabelGenerousTerms2.setForeground(java.awt.Color.red);
         }
         updateModelBoxes();
     }//GEN-LAST:event_jButtonBuyGenerousActionPerformed
@@ -812,6 +821,7 @@ public class MafiaGameWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelCurrentMoney;
     private javax.swing.JLabel jLabelCurrentTurn;
     private javax.swing.JLabel jLabelGenerousTerms1;
+    private javax.swing.JLabel jLabelGenerousTerms2;
     private javax.swing.JLabel jLabelGunTerms1;
     private javax.swing.JLabel jLabelGunTerms2;
     private javax.swing.JLabel jLabelHighScoreHeadline;
