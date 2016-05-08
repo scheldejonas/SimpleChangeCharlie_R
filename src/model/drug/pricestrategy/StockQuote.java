@@ -42,8 +42,8 @@ public class StockQuote implements DrugPriceModelInterface {
                 stockShortNamesAmount.add(string);
             }
         }
-        recievedStockPrices = stockFinder.getStockData(stockShortNamesPrices);
-        recievedStockAmount = stockFinder.getStockData(stockShortNamesAmount);
+//        recievedStockPrices = stockFinder.getStockData(stockShortNamesPrices);
+//        recievedStockAmount = stockFinder.getStockData(stockShortNamesAmount);
     }
 
     @Override
