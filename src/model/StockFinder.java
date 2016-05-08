@@ -1,4 +1,4 @@
-package model.drug.pricestrategy;
+package model;
 
 import java.io.BufferedReader;
 import java.io.IOException;

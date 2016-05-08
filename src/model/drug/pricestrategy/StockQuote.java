@@ -5,6 +5,7 @@
  */
 package model.drug.pricestrategy;
 
+import model.StockFinder;
 import java.util.ArrayList;
 
 /**
