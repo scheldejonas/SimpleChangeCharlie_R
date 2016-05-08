@@ -28,10 +28,10 @@ public class StockQuote implements DrugPriceModelInterface {
         recievedStockPrices = new ArrayList();
         stockShortNamesAmount = new ArrayList();
         recievedStockAmount = new ArrayList();
-        initPriceList();
+        initStockLists();
     }
     
-    public void initPriceList() {
+    public void initStockLists() {
         
         Random r =  new Random();
         for (String string : MafiaGame.excelShortNames) {
@@ -41,7 +41,6 @@ public class StockQuote implements DrugPriceModelInterface {
             else if (r.nextBoolean() && stockShortNamesAmount.size() < 20) {
                 stockShortNamesAmount.add(string);
             }
-            System.out.println(string);
         }
         recievedStockPrices = stockFinder.getStockData(stockShortNamesPrices);
         recievedStockAmount = stockFinder.getStockData(stockShortNamesAmount);
