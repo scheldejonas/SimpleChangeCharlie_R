@@ -242,4 +242,31 @@ public final class MafiaGame {
         return false;
     }
 
+    public boolean buyGenerous(int price) {
+        if (player.getMoney() > price) { //Check if player can afford it.
+            player.removeMoney(price); //Pay from players wallet.
+            player.setGenerous(true);
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean buyFirstClass(int price) {
+        if (player.getMoney() > price) { //Check if player can afford it.
+            player.removeMoney(price); //Pay from players wallet.
+            player.setFirstClass(true);
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean buyNiceClothes(int price) {
+        if (player.getMoney() > price) { //Check if player can afford it.
+            player.removeMoney(price); //Pay from players wallet.
+            player.setNiceClothes(true);
+            return true;
+        }
+        return false;
+    }
+    
 }
