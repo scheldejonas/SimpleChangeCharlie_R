@@ -55,21 +55,24 @@ public class StockFinder {
         for (String stock : stockShortNames) {
             allStocks += stock + "+";
         }
-        System.out.println("" + allStocks);
         allStocks = allStocks.substring(0, allStocks.length() - 1); //Cutting of the last, extra '+'-sign
+        System.out.println("All stocks: " + allStocks);
+        System.out.println("InfoToGet: " + infoToGet);
         try {
             //Creating a connection and support object and getting the stock prices from yahoo finance: URL yahoofinance = new URL("http://finance.yahoo.com/d/quotes.csv?s=" + allStocks + "&f=" + infoToGet);
             URL yahoofinance = new URL("http://finance.yahoo.com/d/quotes.csv?s=" + allStocks + "&f=" + infoToGet);
+            System.out.println("Using link: " + yahoofinance.getPath());
             URLConnection yc = yahoofinance.openConnection(); //Opening a connection 
             BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream())); //Creating a bufferedreader to hold stuff and loading it up instead 
-
             //Running through the answer
             while ((temp = in.readLine()) != null) {
                 if (temp.equalsIgnoreCase("N/A")) { //Ifpriceisnotthere,then... { temp="1.0"; //..defaultvalueof1.0isused
                     System.out.println("Could not get stock quote and used default value of 1.0 instead.");
+                } else {
+                    System.out.println("Got stock quote of value: " + temp);
+                    answer.add(Double.parseDouble(temp)); //Addingpricetoresult arraylist
                 }
             }
-            answer.add(Double.parseDouble(temp)); //Addingpricetoresult arraylist
             in.close(); //Closing the stream 
         }
         //Error handling:

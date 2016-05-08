@@ -18,32 +18,36 @@ import model.StockFinder;
 public class StockQuote implements DrugPriceModelInterface {
     
     private ArrayList<String> stockShortNamesPrices;
-    private ArrayList<Double> recievedStockPrices;
+    private static ArrayList<Double> recievedStockPrices;
     private ArrayList<String> stockShortNamesAmount;
-    private ArrayList<Double> recievedStockAmount;
+    private static ArrayList<Double> recievedStockAmount;
     private StockFinder stockFinder;
+    static boolean initialized;
 
     public StockQuote() {
         stockShortNamesPrices = new ArrayList();
         recievedStockPrices = new ArrayList();
         stockShortNamesAmount = new ArrayList();
         recievedStockAmount = new ArrayList();
-        initStockLists();
+        if (!initialized) {
+            initStockLists();
+            initialized = true;
+        }
     }
     
     public void initStockLists() {
-        
+        int size = MafiaGame.excelShortNames.size();
         Random r =  new Random();
-        for (String string : MafiaGame.excelShortNames) {
-            if (r.nextBoolean() && stockShortNamesPrices.size() < 20) {
-                stockShortNamesPrices.add(string);
-            }
-            else if (r.nextBoolean() && stockShortNamesAmount.size() < 20) {
-                stockShortNamesAmount.add(string);
-            }
+        for (int i = 0; i < 20; i++) {
+            int random = r.nextInt(size);
+            stockShortNamesAmount.add(MafiaGame.excelShortNames.get(random));
         }
-//        recievedStockPrices = stockFinder.getStockData(stockShortNamesPrices);
-//        recievedStockAmount = stockFinder.getStockData(stockShortNamesAmount);
+        for (int i = 0; i < 20; i++) {
+            int random = r.nextInt(size);
+            stockShortNamesPrices.add(MafiaGame.excelShortNames.get(random));
+        }
+        recievedStockPrices = stockFinder.getStockData(stockShortNamesPrices);
+        recievedStockAmount = stockFinder.getStockData(stockShortNamesAmount);
     }
 
     @Override
