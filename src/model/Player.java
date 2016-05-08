@@ -19,7 +19,7 @@ public class Player {
     private final ArrayList<BaseDrug> drugs;
     
     //Event booleans
-    private boolean highFriends, gun;
+    private boolean highFriends, gun, niceClothes, firstClass, generous;
 
     public Player(String name, int money) {
         this.name = name;
@@ -124,6 +124,30 @@ public class Player {
 
     public void setGun(boolean gun) {
         this.gun = gun;
+    }
+
+    public boolean hasNiceClothes() {
+        return niceClothes;
+    }
+
+    public void setNiceClothes(boolean niceClothes) {
+        this.niceClothes = niceClothes;
+    }
+
+    public boolean isFirstClass() {
+        return firstClass;
+    }
+
+    public void setFirstClass(boolean firstClass) {
+        this.firstClass = firstClass;
+    }
+
+    public boolean isGenerous() {
+        return generous;
+    }
+
+    public void setGenerous(boolean generous) {
+        this.generous = generous;
     }
     
 }
