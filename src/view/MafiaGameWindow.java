@@ -254,14 +254,22 @@ public class MafiaGameWindow extends javax.swing.JFrame {
         jButtonTravel = new javax.swing.JButton();
         jButtonHighFriendYakuza = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jLabelYakuzaTerms = new javax.swing.JLabel();
-        jLabelYakuzaPrice = new javax.swing.JLabel();
+        jLabelYakuzaTerms5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButtonBuyGun = new javax.swing.JButton();
+        jLabelGunTerms2 = new javax.swing.JLabel();
+        jLabelYakuzaTerms1 = new javax.swing.JLabel();
+        jLabelGenerousTerms1 = new javax.swing.JLabel();
+        jLabelYakuzaTerms4 = new javax.swing.JLabel();
+        jLabelYakuzaTerms2 = new javax.swing.JLabel();
+        jLabelYakuzaTerms3 = new javax.swing.JLabel();
+        jLabelGunTerms1 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabelGenerousTerms2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jButtonPrintAllDrugPrices = new javax.swing.JButton();
         jButtonTestHighScore = new javax.swing.JButton();
         jButtonUpdatePlayerInventoryTest = new javax.swing.JButton();
-        jButtonBuyGun = new javax.swing.JButton();
-        jLabelGunText = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabelHighScoreHeadline = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -404,11 +412,11 @@ public class MafiaGameWindow extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jComboBoxCountries.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel2.add(jComboBoxCountries, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, 200, -1));
+        jPanel2.add(jComboBoxCountries, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 200, -1));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Go to country");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 15, 580, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 12, 90, 20));
 
         jButtonTravel.setText("Travel");
         jButtonTravel.addActionListener(new java.awt.event.ActionListener() {
@@ -416,29 +424,89 @@ public class MafiaGameWindow extends javax.swing.JFrame {
                 jButtonTravelActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonTravel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 90, -1));
+        jPanel2.add(jButtonTravel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 9, 90, -1));
 
-        jButtonHighFriendYakuza.setText("Buy Access into Yakuza");
+        jButtonHighFriendYakuza.setText("Buy Access into Yakuza ($20.000)");
         jButtonHighFriendYakuza.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHighFriendYakuzaActionPerformed(evt);
             }
         });
-        jPanel2.add(jButtonHighFriendYakuza, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, -1, -1));
+        jPanel2.add(jButtonHighFriendYakuza, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 250, -1));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Travel by High Friends");
+        jLabel5.setText("Tools for traveling better");
         jLabel5.setToolTipText("");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 580, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 580, -1));
 
-        jLabelYakuzaTerms.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelYakuzaTerms.setText("Effect: 2% less chance of getting caught during the game");
-        jPanel2.add(jLabelYakuzaTerms, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 580, 40));
+        jLabelYakuzaTerms5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelYakuzaTerms5.setText("3% improved chance of getting new helping girlfriend");
+        jPanel2.add(jLabelYakuzaTerms5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 138, 330, 20));
 
-        jLabelYakuzaPrice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelYakuzaPrice.setText("Price: $20.000");
-        jPanel2.add(jLabelYakuzaPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 580, -1));
+        jButton1.setText("Buy Nice Clothes ($50.000)");
+        jButton1.setToolTipText("");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 224, 250, -1));
+
+        jButtonBuyGun.setText("Buy Gun ($32.000)");
+        jButtonBuyGun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuyGunActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButtonBuyGun, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 155, 250, -1));
+
+        jLabelGunTerms2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelGunTerms2.setText("1% less chance of get caught trespassing mafia territory");
+        jLabelGunTerms2.setToolTipText("");
+        jPanel2.add(jLabelGunTerms2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 176, 330, 20));
+
+        jLabelYakuzaTerms1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelYakuzaTerms1.setText("2% less chance of getting caught by custom");
+        jLabelYakuzaTerms1.setToolTipText("");
+        jPanel2.add(jLabelYakuzaTerms1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 330, 20));
+
+        jLabelGenerousTerms1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelGenerousTerms1.setText("1% less chance of attacked by angry pusher");
+        jLabelGenerousTerms1.setToolTipText("");
+        jPanel2.add(jLabelGenerousTerms1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 227, 330, 20));
+
+        jLabelYakuzaTerms4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelYakuzaTerms4.setText("4% improved chance of getting new minion pusher ");
+        jPanel2.add(jLabelYakuzaTerms4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 121, 330, 20));
+
+        jLabelYakuzaTerms2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelYakuzaTerms2.setText("1% less chance of attacked by angry pusher");
+        jLabelYakuzaTerms2.setToolTipText("");
+        jPanel2.add(jLabelYakuzaTerms2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 87, 330, 20));
+
+        jLabelYakuzaTerms3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelYakuzaTerms3.setText("2% less chance of get caught trespassing mafia territory");
+        jLabelYakuzaTerms3.setToolTipText("");
+        jPanel2.add(jLabelYakuzaTerms3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 104, 330, 20));
+
+        jLabelGunTerms1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelGunTerms1.setText("2% less chance of attacked by angry pusher");
+        jLabelGunTerms1.setToolTipText("");
+        jPanel2.add(jLabelGunTerms1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 158, 330, 20));
+
+        jButton2.setText("Buy Generous ($40.000)");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 196, 250, -1));
+
+        jLabelGenerousTerms2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelGenerousTerms2.setText("1% less chance of attacked by angry pusher");
+        jLabelGenerousTerms2.setToolTipText("");
+        jPanel2.add(jLabelGenerousTerms2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 330, 20));
 
         jTabbedPane1.addTab("Travel", jPanel2);
 
@@ -469,18 +537,6 @@ public class MafiaGameWindow extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButtonUpdatePlayerInventoryTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 270, -1));
-
-        jButtonBuyGun.setText("Buy Gun ($32.000)");
-        jButtonBuyGun.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBuyGunActionPerformed(evt);
-            }
-        });
-        jPanel3.add(jButtonBuyGun, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 220, -1));
-
-        jLabelGunText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelGunText.setText("Buy a gun to help protect yourself.");
-        jPanel3.add(jLabelGunText, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 570, -1));
 
         jTabbedPane1.addTab("Extra", jPanel3);
 
@@ -643,9 +699,12 @@ public class MafiaGameWindow extends javax.swing.JFrame {
         }
         else {
             jButtonHighFriendYakuza.setEnabled(false);
-            jLabelYakuzaPrice.setEnabled(false);
-            jLabelYakuzaTerms.setText("You bought your way into Yakuza, and they are protecting you on every travel.");
-            jLabelYakuzaTerms.setForeground(java.awt.Color.red);
+            jButtonHighFriendYakuza.setText("You are friends with Yakuza");
+            jLabelYakuzaTerms1.setForeground(java.awt.Color.red);
+            jLabelYakuzaTerms2.setForeground(java.awt.Color.red);
+            jLabelYakuzaTerms3.setForeground(java.awt.Color.red);
+            jLabelYakuzaTerms4.setForeground(java.awt.Color.red);
+            jLabelYakuzaTerms5.setForeground(java.awt.Color.red);
         }
         updateModelBoxes();
     }//GEN-LAST:event_jButtonHighFriendYakuzaActionPerformed
@@ -656,13 +715,24 @@ public class MafiaGameWindow extends javax.swing.JFrame {
         }
         else {
             jButtonBuyGun.setEnabled(false);
-            jLabelGunText.setText("You bought a gun, this will help protect you vs mafia and assaults.");
-            jLabelGunText.setForeground(java.awt.Color.red);
+            jButtonBuyGun.setText("You have a gun");
+            jLabelGunTerms1.setForeground(java.awt.Color.red);
+            jLabelGunTerms2.setForeground(java.awt.Color.red);
         }
         updateModelBoxes();
     }//GEN-LAST:event_jButtonBuyGunActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonBuyDrugs;
     private javax.swing.JButton jButtonBuyGun;
     private javax.swing.JButton jButtonBuyLife;
@@ -683,12 +753,18 @@ public class MafiaGameWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabelCurrentMoney;
     private javax.swing.JLabel jLabelCurrentTurn;
-    private javax.swing.JLabel jLabelGunText;
+    private javax.swing.JLabel jLabelGenerousTerms1;
+    private javax.swing.JLabel jLabelGenerousTerms2;
+    private javax.swing.JLabel jLabelGunTerms1;
+    private javax.swing.JLabel jLabelGunTerms2;
     private javax.swing.JLabel jLabelHighScoreHeadline;
     private javax.swing.JLabel jLabelLifeCost;
     private javax.swing.JLabel jLabelWelcomeText;
-    private javax.swing.JLabel jLabelYakuzaPrice;
-    private javax.swing.JLabel jLabelYakuzaTerms;
+    private javax.swing.JLabel jLabelYakuzaTerms1;
+    private javax.swing.JLabel jLabelYakuzaTerms2;
+    private javax.swing.JLabel jLabelYakuzaTerms3;
+    private javax.swing.JLabel jLabelYakuzaTerms4;
+    private javax.swing.JLabel jLabelYakuzaTerms5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
